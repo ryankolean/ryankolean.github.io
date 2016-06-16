@@ -63,11 +63,11 @@
       userId: '247882746',
       clientId: 'a833584cb4624b8e913a7a4e9fdcefd0',
       accessToken: '247882746.a833584.5814f5d826c94149818beb430f18e3c0',
-      template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /><span>{{likes}}{{comments}}</span></a>',
-      resolution: 'standard_resolution',
+      template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>',
+      resolution: 'thumbnail',
       sortBy: 'most-recent',
       limit: 32,
-      links: false
+      links: true
     });
     feed.run();
 </script>
