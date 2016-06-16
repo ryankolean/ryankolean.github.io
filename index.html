@@ -39,6 +39,10 @@
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
 
+
+<div id="instafeed"></div> 
+
+
 <p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
 
       <footer class="site-footer">
@@ -51,3 +55,15 @@
   
   </body>
 </html>
+
+<script type="text/javascript" src="path/to/instafeed.min.js"></script>
+
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'popular',
+        tagName: 'awesome',
+        clientId: 'YOUR_CLIENT_ID',
+        template: '<a class="animation" href="{{link}}"><img src="{{image}}" /></a>'
+    });
+    feed.run();
+</script>
