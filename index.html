@@ -24,7 +24,7 @@
 <h3>INSTAFEED</h3>
 <div class="instagram_feed" class="owl-carousel owl-theme">
   <div class="owl-wrapper-outer autoHeight">
-    <div id="instafeed"></div> 
+    <div id="instagram_photos"></div> 
   </div>
 </div>
 
@@ -68,11 +68,12 @@
       userId: '247882746',
       clientId: 'a833584cb4624b8e913a7a4e9fdcefd0',
       accessToken: '247882746.a833584.5814f5d826c94149818beb430f18e3c0',
-      template: '<div class="owl-item"><img src="{{image}}></div>',
+      template: "<div class="owl-item"><img src="{{image}}"></div>",
       resolution: 'standard_resolution',
       sortBy: 'most-recent',
       limit: 32,
-      links: true
+      links: true,
+      target: "instagram_photos"
     });
     feed.run();
 </script>
