@@ -54,9 +54,12 @@
 
     </section>
 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="instafeed.js/instafeed.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  
   <script type="text/javascript">
-    var feed = new Instafeed({
+      var feed = new Instafeed({
       get: 'user',
       userId: '247882746',
       clientId: 'a833584cb4624b8e913a7a4e9fdcefd0',
@@ -68,15 +71,13 @@
       links: 'true',
       target: "instagram_feed"
     });
-    feed.run();
-  </script>  
 
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script>
-  <script>
   $(document).ready(function(){
-console.log('start');
+    console.log('run feed');
+    feed.run();
+    
+    console.log('slick start');
+    
     $('#instagram_feed').slick({
       centerMode: true,
       centerPadding: '60px',
