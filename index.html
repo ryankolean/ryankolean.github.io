@@ -102,13 +102,9 @@
 </style>
 $(document).ready(function() {
   $("#instagram_feed").owlCarousel({
-    autoPlay : 3000,
-    stopOnHover : true,
-    navigation:true,
-    paginationSpeed : 1000,
-    goToFirstSpeed : 2000,
-    singleItem : true,
-    autoHeight : true,
-    transitionStyle:"fade"
+    autoPlay: 3000,
+    items : 4,
+    itemsDesktop : [1199,3],
+    itemsDesktopSmall : [979,3]
   });
 });
