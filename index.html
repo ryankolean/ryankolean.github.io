@@ -22,11 +22,7 @@
 <p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
 
 <h3>INSTAFEED</h3>
-<div class="instagram_feed" class="owl-carousel owl-theme">
-  <div class="owl-wrapper-outer autoHeight">
-    <div id="instagram_photos"></div> 
-  </div>
-</div>
+<div class="instagram_feed"></div>
 
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
@@ -73,7 +69,7 @@
       sortBy: 'most-recent',
       limit: 32,
       links: true,
-      target: "instagram_photos"
+      target: "instagram_feed"
     });
     feed.run();
 </script>
@@ -88,10 +84,10 @@
 <script src="owl.carousel/assets/js/google-code-prettify/prettify.js"></script>
 <script src="owl.carousel/assets/js/application.js"></script>
 <style>
-  #instagram_photos .owl-item{
+  #instagram_feed .owl-item{
     padding: 5px;
   }
-  #instagram_photos .owl-item img{
+  #instagram_feed .owl-item img{
     display: block;
     width: 100%;
     height: auto;
@@ -99,9 +95,19 @@
 </style>
 $(document).ready(function() {
   $("#instagram_feed").owlCarousel({
-    autoPlay: 3000,
-    items : 4,
-    itemsDesktop : [1199,3],
-    itemsDesktopSmall : [979,3]
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
   });
 });
