@@ -69,26 +69,30 @@
       sortBy: 'random',
       limit: '5',
       links: 'true',
-      target: "instagram_feed"
+      target: "instagram_feed",
+      after: start_slick()
     });
 
   $(document).ready(function(){
     console.log('run feed');
     feed.run();
     
-    console.log('slick start');
-    //Needs check for instafeed callback so that we know the div and images have been created
-    $('.instagram_feed').slick({
-      autoplay: true,
-      arrows: true,
-      centerMode: true,
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 1,
-      variableWidth: true,
-      adaptiveHeight: true
-    });
+    function start_slick() {
+      console.log('slick start');
+      //Needs check for instafeed callback so that we know the div and images have been created
+      $('.instagram_feed').slick({
+        autoplay: true,
+        arrows: true,
+        centerMode: true,
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        variableWidth: true,
+        adaptiveHeight: true
+      });
+    }
+    
   });
   
   </script>
