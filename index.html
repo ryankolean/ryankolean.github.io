@@ -74,14 +74,14 @@
       console.log('slick start');
       //Needs check for instafeed callback so that we know the div and images have been created
       $('.instagram_feed').slick({
-        autoplay: true,
+        centerMode: false,
         arrows: true,
-        centerMode: true,
         dots: true,
         infinite: true,
-        speed: 300,
-        slidesToShow: 1,
         variableWidth: true,
+        lazyLoad: 'ondemand',
+        speed: 500,
+        slidesToShow: 1,
       });
     }
     });
