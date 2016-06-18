@@ -65,8 +65,8 @@
       clientId: 'a833584cb4624b8e913a7a4e9fdcefd0',
       accessToken: '247882746.a833584.5814f5d826c94149818beb430f18e3c0',
       template: '<div><img src="{{image}}" atl=""></div>',
-      resolution: 'thumbnail',
-      sortBy: 'random',
+      resolution: 'low_resolution',
+      sortBy: 'most-liked',
       limit: '50',
       links: 'true',
       target: "instagram_feed",
@@ -80,25 +80,23 @@
         dots: false,
         infinite: true,
         variableWidth: true,
-        lazyLoad: 'ondemand',
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         responsive: [
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
+              slidesToShow: 1,
+              slidesToScroll: 1,
               infinite: true,
-              dots: true
             }
           },
           {
             breakpoint: 600,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
+              slidesToShow: 1,
+              slidesToScroll: 1
             }
           },
           {
