@@ -59,80 +59,62 @@
   <script type="text/javascript" src="slick/slick.min.js"></script>
   
   <script type="text/javascript">
-      var feed = new Instafeed({
-      get: 'user',
-      userId: '247882746',
-      clientId: 'a833584cb4624b8e913a7a4e9fdcefd0',
-      accessToken: '247882746.a833584.5814f5d826c94149818beb430f18e3c0',
-      template: '<div><img src="{{image}}" atl=""></div>',
-      resolution: 'thumbnail',
-      sortBy: 'most-liked',
-      limit: '50',
-      links: 'true',
-      target: "instagram_feed",
-      after: function start_slick() {
-      console.log('slick start');
-      //Needs check for instafeed callback so that we know the div and images have been created
-      $('.instagram_feed').slick({
-        centerMode: false,
-        centerPadding: '60px',
-        arrows: true,
-        dots: false,
-        infinite: true,
-        variableWidth: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
+    var feed = new Instafeed({
+    get: 'user',
+    userId: '247882746',
+    clientId: 'a833584cb4624b8e913a7a4e9fdcefd0',
+    accessToken: '247882746.a833584.5814f5d826c94149818beb430f18e3c0',
+    template: '<div><img src="{{image}}" atl=""></div>',
+    resolution: 'thumbnail',
+    sortBy: 'most-liked',
+    limit: '50',
+    links: 'true',
+    target: "instagram_feed",
+    after: function start_slick() {
+    console.log('slick start');
+    //Needs check for instafeed callback so that we know the div and images have been created
+    $('.instagram_feed').slick({
+      centerMode: false,
+      centerPadding: '60px',
+      arrows: true,
+      dots: false,
+      infinite: true,
+      variableWidth: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
           }
-        ]
-      });
-    }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
-
+    }
+  });
+  
   $(document).ready(function(){
     console.log('run feed');
     feed.run();
-    
-    function start_slick() {
-      console.log('slick start');
-      //Needs check for instafeed callback so that we know the div and images have been created
-      $('.instagram_feed').slick({
-        autoplay: true,
-        arrows: true,
-        centerMode: true,
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        variableWidth: true,
-        adaptiveHeight: true
-      });
-    }
-    
-  });
-  
+  }
   </script>
   
   </body>
