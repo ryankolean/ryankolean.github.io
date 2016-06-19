@@ -67,15 +67,15 @@
       template: '<div><img src="{{image}}" atl=""></div>',
       resolution: 'thumbnail',
       sortBy: 'most-liked',
-      limit: '100',
+      limit: '18',
       links: 'true',
       target: "instagram_feed",
       after: function start_slick() {
         $('.instagram_feed').slick({
           arrows: true,
           infinite: true,
-          rows: 3,
-          slidesPerRow: 4,
+          rows: 2,
+          slidesPerRow: 3,
           speed: 500
         });
       }
