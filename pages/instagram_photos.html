@@ -45,15 +45,17 @@
           $('.instagram_feed').slick({
             arrows: true,
             infinite: true,
-            rows: 2,
-            slidesPerRow: 3,
-            speed: 500
+            //rows: 2,
+            //slidesPerRow: 3,
+            centerMode: true,
+            centerPadding: 100px,
+            fade: true,
+            speed: 500,
           });
         }
       });
     
     $(document).ready(function(){
-      console.log('run feed');
       feed.run();
     });
     </script>
