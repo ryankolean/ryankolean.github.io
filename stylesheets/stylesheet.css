@@ -248,3 +248,14 @@ instagram_feed {
   width: 40%; 
 }
 
+#object-div {
+    float: left;
+}
+
+iframe {
+    float: right;
+}
+
+#object-div, iframe {
+    display: inline-block;
+}
