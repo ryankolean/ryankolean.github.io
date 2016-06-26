@@ -22,56 +22,27 @@
 
     <section class="main-content">
 
-    <div class="stream" align="center">
-      <object type="application/x-shockwave-flash" height="500" width="900" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=cookiedaemon" bgcolor="#000000">
-        <param name="allowFullScreen" value="true" />
-        <param name="allowScriptAccess" value="always" />
-        <param name="allowNetworking" value="all" />
-        <param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" />
-        <param name="flashvars" value="hostname=www.twitch.tv&channel=cookiedaemon&auto_play=true&start_volume=25" />
-      </object>
-      <iframe frameborder="0" scrolling="no" src="http://twitch.tv/cookiedaemon/chat?popout="  height="500" width="350"></iframe>
-    </div>
 
-    <div align="right">    
-      <iframe frameborder="0" scrolling="no" src="http://twitch.tv/cookiedaemon/chat?popout=" height="500" width="350"></iframe>
-    </div>
-    
+    <section>
+      <div class="stream" align="center">
+        <object type="application/x-shockwave-flash" height="500" width="900" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=cookiedaemon" bgcolor="#000000">
+          <param name="allowFullScreen" value="true" />
+          <param name="allowScriptAccess" value="always" />
+          <param name="allowNetworking" value="all" />
+          <param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" />
+          <param name="flashvars" value="hostname=www.twitch.tv&channel=cookiedaemon&auto_play=true&start_volume=25" />
+        </object>
+        <iframe frameborder="0" scrolling="no" src="http://twitch.tv/cookiedaemon/chat?popout="  height="500" width="350"></iframe>
+      </div>
+    </section>
+
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../instafeed.js/instafeed.js"></script>
     <script type="text/javascript" src="../slick/slick.min.js"></script>
     
     <script type="text/javascript">
-      var feed = new Instafeed({
-        get: 'user',
-        userId: '247882746',
-        clientId: 'a833584cb4624b8e913a7a4e9fdcefd0',
-        accessToken: '247882746.a833584.5814f5d826c94149818beb430f18e3c0',
-        template: '<div><a href="{{link}}"><img src="{{image}}"></a> <p>{{caption}}</p> <p>♥ {{likes}}</p> <p>☕ {{comments}}</p> <p>{{location}}</p></div>',
-        resolution: 'standard_resolution',
-        sortBy: 'random',
-        limit: '20',
-        links: 'true',
-        target: "instagram_feed",
-        after: function start_slick() {
-          $('.instagram_feed').slick({
-            arrows: true,
-            infinite: true,
-            //rows: 2,
-            //slidesPerRow: 3,
-            centerMode: true,
-            centerPadding: '100px',
-            fade: true,
-            speed: 600,
-            autoplay: 1,
-            autoplaySpeed: 5000,
-          });
-        }
+      $(document).ready(function(){
       });
-    
-    $(document).ready(function(){
-      feed.run();
-    });
     </script>
   
   </body>
